@@ -31,6 +31,7 @@ TaskMe foi criado como um projeto de treinamento para desenvolver e consolidar h
 ### Pré-requisitos
 
 - Node.js
+- Typescript
 - MongoDB
 - Yarn ou npm
 
