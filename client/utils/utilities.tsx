@@ -31,12 +31,12 @@ export const formatTime = (createdAt: string) => {
 export const filteredTasks = (tasks: Task[], priority: string) => {
   const filteredTasks = () => {
     switch (priority) {
-      case "low":
-        return tasks.filter((task) => task.priority === "low");
-      case "medium":
-        return tasks.filter((task) => task.priority === "medium");
-      case "high":
-        return tasks.filter((task) => task.priority === "high");
+      case "baixa":
+        return tasks.filter((task) => task.priority === "baixa");
+      case "media":
+        return tasks.filter((task) => task.priority === "media");
+      case "alta":
+        return tasks.filter((task) => task.priority === "alta");
       default:
         return tasks;
     }

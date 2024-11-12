@@ -30,7 +30,7 @@ export default function Home() {
       </div>
 
       <motion.div
-        className="pb-[2rem] mt-6 grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-[1.5rem]"
+        className="pb-[4rem] mt-4 grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-[1.5rem]"
         variants={container}
         initial="hidden"
         animate="visible"
@@ -39,7 +39,7 @@ export default function Home() {
           <TaskItem key={i} task={task} />
         ))}
         <motion.button
-          className="h-[16rem] w-full py-2 rounded-md text-lg font-medium text-gray-500 border-dashed border-2 border-gray-400
+          className="h-[13rem] w-full py-2 rounded-md text-lg font-medium text-gray-500 border-dashed border-2 border-gray-400
           hover:bg-gray-300 hover:border-none transition duration-200 ease-in-out"
           onClick={openModalForAdd}
           variants={item}
