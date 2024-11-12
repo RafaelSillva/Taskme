@@ -6,25 +6,22 @@ const TokenSchema = new mongoose.Schema({
     ref: "User",
     required: true,
   },
-
   verificationToken: {
     type: String,
     default: "",
   },
-
   passwordResetToken: {
     type: String,
     default: "",
   },
-
   createdAt: {
     type: Date,
-    required: true,
+    default: Date.now, // Define a data de criação automaticamente
   },
-
   expiresAt: {
     type: Date,
     required: true,
+    index: { expires: '1s' } // Configura a expiração para remover documentos automaticamente
   },
 });
 

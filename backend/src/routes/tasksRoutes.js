@@ -6,7 +6,7 @@ import {
   getTasks,
   updateTask,
 } from "../controllers/task/taskController.js";
-import { protect } from "../middleware/authMiddleware.js";
+import { protect, adminMiddleware, creatorMiddleware, verifiedMiddleware } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 

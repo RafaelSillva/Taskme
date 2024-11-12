@@ -24,34 +24,29 @@ import {
 
 const router = express.Router();
 
+// Auth routes
 router.post("/register", registerUser);
 router.post("/login", loginUser);
 router.get("/logout", logoutUser);
-router.get("/user", protect, getUser);
-router.patch("/user", protect, updateUser);
-
-// admin route
-router.delete("/admin/users/:id", protect, adminMiddleware, deleteUser);
-
-// get all users
-router.get("/admin/users", protect, creatorMiddleware, getAllUsers);
-
-// login status
 router.get("/login-status", userLoginStatus);
 
-// email verification
+// User profile and updates
+router.get("/user", protect, getUser);
+router.patch("/user", protect, updateUser);
+router.patch("/change-password", protect, changePassword); // Change password (user must be logged in)
+
+// Email verification
 router.post("/verify-email", protect, verifyEmail);
+router.post("/verify-user/:verificationToken", verifyUser); // Email verification using token
 
-// veriify user --> email verification
-router.post("/verify-user/:verificationToken", verifyUser);
-
-// forgot password
+// Password recovery
 router.post("/forgot-password", forgotPassword);
-
-//reset password
 router.post("/reset-password/:resetPasswordToken", resetPassword);
 
-// change password ---> user must be logged in
-router.patch("/change-password", protect, changePassword);
+// Admin-only routes (requires adminMiddleware)
+router.delete("/admin/users/:id", protect, adminMiddleware, deleteUser);
+
+// Admin/creator routes
+router.get("/admin/users", protect, creatorMiddleware, getAllUsers); // Get all users
 
 export default router;
