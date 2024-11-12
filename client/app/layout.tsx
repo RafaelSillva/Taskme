@@ -35,7 +35,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
-        <link rel="icon" type="img" href="/list-check.svg"></link>
+        <link rel="icon" href="/list-check.svg" type="image/svg+xml" />
       </head>
       <body className={inter.className}>
         <UserProvider>
