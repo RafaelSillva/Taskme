@@ -1,4 +1,3 @@
-"use client";
 import { useTasks } from "@/context/taskContext";
 import { useUserContext } from "@/context/userContext";
 import useDetectOutside from "@/hooks/useDetectOutside";
@@ -9,7 +8,7 @@ import React from "react";
 function ProfileModal() {
   const ref = React.useRef(null);
 
-  const { closeModal } = useTasks();
+  const { closeModal } = useTasks(); // Função para fechar o modal
   const { user, updateUser, handlerUserInput, userState, changePassword } =
     useUserContext();
 
@@ -153,8 +152,10 @@ function ProfileModal() {
 
           <div className="flex justify-end gap-4 border-t-2 border-t-[#323232]/10">
             <button
+              type="button"
               className="mt-3 py-2 px-4 bg-transparent text-black text-sm font-medium rounded-md border-2 border-[#323232]/10
                 hover:bg-[#EB4E31] hover:border-transparent hover:text-white transition-all duration-300"
+              onClick={closeModal} // Aqui você chama a função closeModal para fechar o modal
             >
               Cancelar
             </button>
