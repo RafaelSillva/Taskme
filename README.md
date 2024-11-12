@@ -31,6 +31,7 @@ TaskMe foi criado como um projeto de treinamento para desenvolver e consolidar h
 ### Pré-requisitos
 
 - Node.js
+- Typescript
 - MongoDB
 - Yarn ou npm
 
@@ -56,4 +57,34 @@ yarn dev
 
 ### Abra 
 http://localhost:3000 para visualizar a aplicação no navegador.
+
+📂 Estrutura do Projeto
+taskme/
+├── components/    # Componentes reutilizáveis da aplicação
+├── models/        # Modelos de dados do MongoDB
+├── pages/         # Páginas do Next.js
+├── public/        # Arquivos estáticos
+├── styles/        # Arquivos de estilo (Tailwind CSS)
+├── utils/         # Funções auxiliares
+└── README.md      # Documentação do projeto
+
+📸 Capturas de Tela
+<image src="https://github.com/RafaelSillva/Taskme/blob/main/client/public/Captura%20de%20tela%202024-11-12%20141318.png"/>
+<image src="https://github.com/RafaelSillva/Taskme/blob/main/client/public/Captura%20de%20tela%202024-11-12%20141356.png"/>
+
+📖 Aprendizados
+Este projeto permitiu consolidar habilidades em:
+
+Estruturação de uma aplicação com Next.js.
+Uso de React Hooks para manipulação de estado e efeitos.
+Estilização com Tailwind CSS para design responsivo.
+Integração de uma aplicação Next.js com MongoDB para persistência de dados.
+
+🤝 Contribuição
+Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests ou abrir issues para sugerir melhorias ou reportar problemas.
+
+📝 Licença
+Este projeto é licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+Este `README.md` dá uma visão clara das funcionalidades, tecnologias, objetivo, instruções de instalação e outros detalhes essenciais para que outros desenvolvedores entendam e utilizem a aplicação TaskMe.
 
