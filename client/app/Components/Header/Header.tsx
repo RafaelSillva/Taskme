@@ -56,7 +56,7 @@ function Header() {
 
         <div className="flex gap-4 items-center">
           <Link
-            href="https://github.com/RafaelSillva"
+            href="https://github.com/RafaelSillva/Taskme"
             passHref
             target="_blank"
             rel="noopener noreferrer"
